@@ -24,7 +24,13 @@ def buscar_contato ():
         if not encontrou:
             print ("Nenhum contato encontrado.")
 def remover_contato ():
-    pass
+    nome = input ("Digite o nome exato do contato a remover: ")
+    for contato in contatos:
+        if contato["nome"].lower() == nome.lower() :                
+            contatos.remove(contato)
+            print ("Contato removido.")
+            return
+    print ("Contato não encontrado.")
 while True:
     print ("\n=== Agenda de Contatos ===")
     print ("1 - Cadastrar contato") 
